@@ -1,0 +1,1863 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    <!-- Start book Clojure - building a simple web app -->
+<!-- Start book Clojure - building a simple web app -->
+    <head>
+        <!-- head:start -->
+<!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Java | Clojure - building a simple web app</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.1.0">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-richquotes/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-exercises/exercises.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-quizzes/quizzes.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-codeblock-filename/block.css">
+        
+    
+    
+        <link rel="stylesheet" href="../styles/website.css">
+    
+
+        
+    
+    
+    <link rel="next" href="../development-environment/leiningen.html" />
+    
+    
+    <link rel="prev" href="../development-environment/index.html" />
+    
+
+        <!-- head:end -->
+<!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+<!-- body:start -->
+        
+    <div class="book" data-level="26.1" data-basepath=".." data-revision="Thu Mar 24 2016 17:45:08 GMT+0000 (GMT)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        
+
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="overview/index.html">
+            
+                
+                    <a href="../overview/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Theory: Clojure Overview
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="overview/webapps-in-clojure.html">
+            
+                
+                    <a href="../overview/webapps-in-clojure.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Theory: WebApps in Clojure
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="setup/index.html">
+            
+                
+                    <a href="../setup/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Setup
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="create-a-project/index.html">
+            
+                
+                    <a href="../create-a-project/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Create a Project
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="create-a-webserver-with-ring/index.html">
+            
+                
+                    <a href="../create-a-webserver-with-ring/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Create a webserver with Ring
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="create-a-webserver-with-ring/add-ring-dependency.html">
+            
+                
+                    <a href="../create-a-webserver-with-ring/add-ring-dependency.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Add Ring Dependency
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="create-a-webserver-with-ring/configure-main-namespace.html">
+            
+                
+                    <a href="../create-a-webserver-with-ring/configure-main-namespace.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Configure main namespace
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="create-a-webserver-with-ring/namespaces.html">
+            
+                
+                    <a href="../create-a-webserver-with-ring/namespaces.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        Theory: namespaces
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="create-a-webserver-with-ring/include-ring-library.html">
+            
+                
+                    <a href="../create-a-webserver-with-ring/include-ring-library.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        Include Ring Library
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="create-a-webserver-with-ring/add-a-jetty-webserver.html">
+            
+                
+                    <a href="../create-a-webserver-with-ring/add-a-jetty-webserver.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        Add a Jetty webserver
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="create-a-webserver-with-ring/coersing-types-and-java-lang.html">
+            
+                
+                    <a href="../create-a-webserver-with-ring/coersing-types-and-java-lang.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        Theory: Coersing Types &amp; java.lang
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="create-a-webserver-with-ring/run-webserver.html">
+            
+                
+                    <a href="../create-a-webserver-with-ring/run-webserver.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        Run webserver
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="introducing-ring/index.html">
+            
+                
+                    <a href="../introducing-ring/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Theory: Introducing Ring
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="create-a-handler-function/index.html">
+            
+                
+                    <a href="../create-a-handler-function/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Create a handler function
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="create-a-handler-function/add-not-found.html">
+            
+                
+                    <a href="../create-a-handler-function/add-not-found.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        Add error for bad routes
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="create-a-handler-function/if-function.html">
+            
+                
+                    <a href="../create-a-handler-function/if-function.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        Theory: if function
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="create-a-handler-function/maps-and-keywords.html">
+            
+                
+                    <a href="../create-a-handler-function/maps-and-keywords.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        Theory: maps and keywords
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="persistent-data-structures/index.html">
+            
+                
+                    <a href="../persistent-data-structures/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Theory: Persistent Data Structures
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="persistent-data-structures/lists.html">
+            
+                
+                    <a href="../persistent-data-structures/lists.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        Theory: Lists
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="persistent-data-structures/maps.html">
+            
+                
+                    <a href="../persistent-data-structures/maps.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        Theory: Maps
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="persistent-data-structures/vectors.html">
+            
+                
+                    <a href="../persistent-data-structures/vectors.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        Theory: Vectors
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="persistent-data-structures/sets.html">
+            
+                
+                    <a href="../persistent-data-structures/sets.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.</b>
+                        
+                        Theory: Sets
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="middleware-in-ring/index.html">
+            
+                
+                    <a href="../middleware-in-ring/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        Middleware in Ring
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="middleware-in-ring/wrap-reload.html">
+            
+                
+                    <a href="../middleware-in-ring/wrap-reload.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        wrap-reload
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="middleware-in-ring/test-your-code-reloads.html">
+            
+                
+                    <a href="../middleware-in-ring/test-your-code-reloads.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        Test your code reloads
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="compojure/index.html">
+            
+                
+                    <a href="../compojure/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        Compojure
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1" data-path="compojure/adding-dependency.html">
+            
+                
+                    <a href="../compojure/adding-dependency.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.</b>
+                        
+                        Adding dependency
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="compojure/defroutes.html">
+            
+                
+                    <a href="../compojure/defroutes.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.</b>
+                        
+                        Compojure defroutes
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="compojure/using-compojure.html">
+            
+                
+                    <a href="../compojure/using-compojure.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.3.</b>
+                        
+                        Using Compojure
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.4" data-path="compojure/adding-goodbye-route.html">
+            
+                
+                    <a href="../compojure/adding-goodbye-route.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.4.</b>
+                        
+                        Adding goodbye route
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.5" data-path="compojure/about.html">
+            
+                
+                    <a href="../compojure/about.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.5.</b>
+                        
+                        About route
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.6" data-path="compojure/show-request-info.html">
+            
+                
+                    <a href="../compojure/show-request-info.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.6.</b>
+                        
+                        Show request info
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.7" data-path="compojure/variable-path-elements.html">
+            
+                
+                    <a href="../compojure/variable-path-elements.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.7.</b>
+                        
+                        Variable Path Elements
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.8" data-path="compojure/calculator.html">
+            
+                
+                    <a href="../compojure/calculator.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.8.</b>
+                        
+                        Calculator
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="heroku/index.html">
+            
+                
+                    <a href="../heroku/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        Deploying to Heroku
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1" data-path="heroku/update-project.html">
+            
+                
+                    <a href="../heroku/update-project.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.1.</b>
+                        
+                        Update the project
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="heroku/procfile.html">
+            
+                
+                    <a href="../heroku/procfile.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.2.</b>
+                        
+                        Add Procfile
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="heroku/deploy.html">
+            
+                
+                    <a href="../heroku/deploy.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.3.</b>
+                        
+                        Deploy to Heroku
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="hiccup/index.html">
+            
+                
+                    <a href="../hiccup/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                        Hiccup HTML library
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="11.1" data-path="hiccup/updating-handlers-with-hiccup.html">
+            
+                
+                    <a href="../hiccup/updating-handlers-with-hiccup.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.1.</b>
+                        
+                        Updating handlers with hiccup
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="hiccup/create-new-handler.html">
+            
+                
+                    <a href="../hiccup/create-new-handler.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.2.</b>
+                        
+                        Create a new handler
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="12" data-path="refactor-namespace/index.html">
+            
+                
+                    <a href="../refactor-namespace/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.</b>
+                        
+                        Refactor namespace
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="12.1" data-path="refactor-namespace/base-routes.html">
+            
+                
+                    <a href="../refactor-namespace/base-routes.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.1.</b>
+                        
+                        Base routes
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12.2" data-path="refactor-namespace/play-routes.html">
+            
+                
+                    <a href="../refactor-namespace/play-routes.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.2.</b>
+                        
+                        Play routes
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12.3" data-path="refactor-namespace/task-routes.html">
+            
+                
+                    <a href="../refactor-namespace/task-routes.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.3.</b>
+                        
+                        Task routes
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="12.4" data-path="refactor-namespace/core.html">
+            
+                
+                    <a href="../refactor-namespace/core.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>12.4.</b>
+                        
+                        Refactored Core
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="13" data-path="postgres/index.html">
+            
+                
+                    <a href="../postgres/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.</b>
+                        
+                        Postgres Database
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="13.1" data-path="postgres/install.html">
+            
+                
+                    <a href="../postgres/install.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.1.</b>
+                        
+                        Postgres install
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.2" data-path="postgres/environment-variables.html">
+            
+                
+                    <a href="../postgres/environment-variables.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.2.</b>
+                        
+                        Environment Variables
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.3" data-path="postgres/postgres-cli.html">
+            
+                
+                    <a href="../postgres/postgres-cli.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.3.</b>
+                        
+                        Postgres CLI
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.4" data-path="postgres/pg-admin.html">
+            
+                
+                    <a href="../postgres/pg-admin.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.4.</b>
+                        
+                        pgAdmin
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="13.5" data-path="postgres/dataclips.html">
+            
+                
+                    <a href="../postgres/dataclips.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>13.5.</b>
+                        
+                        Dataclips
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="14" data-path="connect-to-postgres/index.html">
+            
+                
+                    <a href="../connect-to-postgres/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.</b>
+                        
+                        Connect to Postgres
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="14.1" data-path="connect-to-postgres/add-database-dependencies.html">
+            
+                
+                    <a href="../connect-to-postgres/add-database-dependencies.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.1.</b>
+                        
+                        Add Database Dependencies
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="14.2" data-path="connect-to-postgres/define-db-connection.html">
+            
+                
+                    <a href="../connect-to-postgres/define-db-connection.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>14.2.</b>
+                        
+                        Define Database Connection
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="15" data-path="database-model/index.html">
+            
+                
+                    <a href="../database-model/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>15.</b>
+                        
+                        Creating a database model
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="15.1" data-path="database-model/create-table.html">
+            
+                
+                    <a href="../database-model/create-table.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>15.1.</b>
+                        
+                        Create table
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="15.2" data-path="database-model/create-task.html">
+            
+                
+                    <a href="../database-model/create-task.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>15.2.</b>
+                        
+                        Create task
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="15.3" data-path="database-model/show-all-task.html">
+            
+                
+                    <a href="../database-model/show-all-task.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>15.3.</b>
+                        
+                        List tasks
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="15.4" data-path="database-model/delete-task.html">
+            
+                
+                    <a href="../database-model/delete-task.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>15.4.</b>
+                        
+                        Delete task
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="15.5" data-path="database-model/alternative-approaches.html">
+            
+                
+                    <a href="../database-model/alternative-approaches.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>15.5.</b>
+                        
+                        Alternative approaches
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="16" data-path="task-handlers/index.html">
+            
+                
+                    <a href="../task-handlers/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>16.</b>
+                        
+                        Task handlers
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="16.1" data-path="task-handlers/add-a-task.html">
+            
+                
+                    <a href="../task-handlers/add-a-task.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>16.1.</b>
+                        
+                        Add a task
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="16.2" data-path="task-handlers/show-task.html">
+            
+                
+                    <a href="../task-handlers/show-task.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>16.2.</b>
+                        
+                        Show tasks
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="16.3" data-path="task-handlers/delete-a-task.html">
+            
+                
+                    <a href="../task-handlers/delete-a-task.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>16.3.</b>
+                        
+                        Delete a task
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="17" data-path="working-example/index.html">
+            
+                
+                    <a href="../working-example/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>17.</b>
+                        
+                        A working example
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="18" data-path="libraries/index.html">
+            
+                
+                    <a href="../libraries/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>18.</b>
+                        
+                        Libraries
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="19" data-path="work-in-progress.html">
+            
+                
+                    <a href="../work-in-progress.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>19.</b>
+                        
+                        Work in Progress
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="20" data-path="using-postgres/index.html">
+            
+                
+                    <a href="../using-postgres/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>20.</b>
+                        
+                        Using Postgres from Clojure
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="21" data-path="full-app/index.html">
+            
+                
+                    <a href="../full-app/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>21.</b>
+                        
+                        Building a full database backed app
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="21.1" data-path="libraries/clojars.html">
+            
+                
+                    <a href="../libraries/clojars.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>21.1.</b>
+                        
+                        Clojars
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="21.2" data-path="libraries/om.html">
+            
+                
+                    <a href="../libraries/om.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>21.2.</b>
+                        
+                        om
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="21.3" data-path="libraries/edn.html">
+            
+                
+                    <a href="../libraries/edn.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>21.3.</b>
+                        
+                        edn
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="22" data-path="testing/index.html">
+            
+                
+                    <a href="../testing/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>22.</b>
+                        
+                        Testing
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="22.1" data-path="testing/index.html">
+            
+                
+                    <a href="../testing/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>22.1.</b>
+                        
+                        Testing
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="23" data-path="reference/index.html">
+            
+                
+                    <a href="../reference/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>23.</b>
+                        
+                        Reference
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="23.1" data-path="reference/basic-syntax.html">
+            
+                
+                    <a href="../reference/basic-syntax.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>23.1.</b>
+                        
+                        Basic Syntax
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="23.2" data-path="reference/strings.html">
+            
+                
+                    <a href="../reference/strings.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>23.2.</b>
+                        
+                        Strings
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="23.3" data-path="reference/maths.html">
+            
+                
+                    <a href="../reference/maths.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>23.3.</b>
+                        
+                        Maths
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="23.4" data-path="reference/data-structures.html">
+            
+                
+                    <a href="../reference/data-structures.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>23.4.</b>
+                        
+                        Data Structures
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="23.5" data-path="reference/functions.html">
+            
+                
+                    <a href="../reference/functions.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>23.5.</b>
+                        
+                        Functions
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="23.6" data-path="reference/control-flow.html">
+            
+                
+                    <a href="../reference/control-flow.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>23.6.</b>
+                        
+                        Control flow
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="23.7" data-path="reference/local-assignement.html">
+            
+                
+                    <a href="../reference/local-assignement.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>23.7.</b>
+                        
+                        Local Assignment
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="23.8" data-path="reference/including-libraries.html">
+            
+                
+                    <a href="../reference/including-libraries.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>23.8.</b>
+                        
+                        Including Libraries
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="24" data-path="lighttable/index.html">
+            
+                
+                    <a href="../lighttable/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>24.</b>
+                        
+                        Lighttable
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="24.1" data-path="lighttable/configure-keyboard-mappings.html">
+            
+                
+                    <a href="../lighttable/configure-keyboard-mappings.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>24.1.</b>
+                        
+                        Configure Keyboard mappings
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="25" data-path="leiningen/index.html">
+            
+                
+                    <a href="../leiningen/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>25.</b>
+                        
+                        Projects with Leiningen
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="25.1" data-path="leiningen/create-a-project.html">
+            
+                
+                    <a href="../leiningen/create-a-project.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>25.1.</b>
+                        
+                        Create a project
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="25.2" data-path="leiningen/run-the-repl.html">
+            
+                
+                    <a href="../leiningen/run-the-repl.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>25.2.</b>
+                        
+                        Run the REPL
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="25.3" data-path="leiningen/profile.html">
+            
+                
+                    <a href="../leiningen/profile.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>25.3.</b>
+                        
+                        Profiles overview
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="25.4" data-path="leiningen/adding-a-dev-profile.html">
+            
+                
+                    <a href="../leiningen/adding-a-dev-profile.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>25.4.</b>
+                        
+                        Adding a dev profile
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="25.5" data-path="leiningen/templates.html">
+            
+                
+                    <a href="../leiningen/templates.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>25.5.</b>
+                        
+                        Templates
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="25.6" data-path="leiningen/plugins.html">
+            
+                
+                    <a href="../leiningen/plugins.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>25.6.</b>
+                        
+                        Plugins
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="26" data-path="development-environment/index.html">
+            
+                
+                    <a href="../development-environment/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>26.</b>
+                        
+                        Development Environments
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="26.1" data-path="development-environment/java.html">
+            
+                
+                    <a href="../development-environment/java.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>26.1.</b>
+                        
+                        Java
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="26.2" data-path="development-environment/leiningen.html">
+            
+                
+                    <a href="../development-environment/leiningen.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>26.2.</b>
+                        
+                        Leiningen
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="26.3" data-path="development-environment/lighttable.html">
+            
+                
+                    <a href="../development-environment/lighttable.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>26.3.</b>
+                        
+                        LightTable
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="26.4" data-path="development-environment/other-tools.html">
+            
+                
+                    <a href="../development-environment/other-tools.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>26.4.</b>
+                        
+                        Other tools
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Published with GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Clojure - building a simple web app</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="running-clojure-applications">Running Clojure applications</h2>
+<p>You will need to have a Java Runtime Edition (usually installed on most computers by default) to run any Clojure applications.</p>
+<p>To test if you have Java on your computer, open a command line window and run the command</p>
+<pre><code class="lang-undefined">java -version
+</code></pre>
+<h2 id="building-clojure-applications">Building Clojure applications</h2>
+<p>Clojure is a compiled language and as you evaluate your code it is compiled into Java bytecode.</p>
+<p>So in order to develop Clojure, you must have either OpenJDK or Oracle SE (JDK) installed, vers 8 is recommended (although version 6 &amp; 7 should work).</p>
+<pre><code class="lang-undefined">javac -version
+</code></pre>
+<h2 id="installing-a-java-software-development-kit-java-sdk">Installing a Java Software Development Kit (Java SDK)</h2>
+<p>Download and install the latest <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">Oracle Java SDK</a> (version 1.8 at time of writing).</p>
+<p>Alternatively, install <a href="http://openjdk.java.net/install/index.html" target="_blank">OpenJDK</a></p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../development-environment/index.html" class="navigation navigation-prev " aria-label="Previous page: Development Environments"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../development-environment/leiningen.html" class="navigation navigation-next " aria-label="Next page: Leiningen"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-codeblock-disable-glossary/disable-glossary.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-disqus/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-exercises/ace/ace.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-exercises/ace/theme-tomorrow.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-exercises/ace/mode-javascript.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-exercises/exercises.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-quizzes/quizzes.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2},"richquotes":{"todos":true},"disqus":{"shortName":"clojure-webapps-practicalli"}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+<!-- body:end -->
+<script src="../gitbook/plugins/gitbook-plugin-exercises/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+    </body>
+    <!-- End of book Clojure - building a simple web app -->
+<!-- End of book Clojure - building a simple web app -->
+</html>
